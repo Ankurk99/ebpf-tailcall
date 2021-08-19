@@ -3,29 +3,42 @@ package main
 import (
 	"C"
 
-	bpf "github.com/kubearmor/libbpf"
+	bpf "github.com/aquasecurity/tracee/libbpfgo"
 )
 import (
-	"fmt"
+	"os"
+	"unsafe"
+	"os/signal"
 )
 
 func main() {
+	sig := make(chan os.Signal, 1)
+	signal.Notify(sig, os.Interrupt)
 
-	b, err := bpf.OpenObjectFromFile("hello.bpf.o")
+	b, err := bpf.NewModuleFromFile("hello.bpf.o")
 	must(err)
 	defer b.Close()
 
-	must(b.Load())
+	must(b.BPFLoadObject())
 
-	p, err := b.FindProgramByName("hello")
+	prog, err := b.GetProgram("hello")
+	must(err)
+	_, err = prog.AttachKprobe(sys_execve)
 	must(err)
 
-	_, err = p.AttachKprobe("__x64_sys_execve")
+	sub_prog, err := b.GetProgram("world")
+	must(err)
+	sub_prog_fd := sub_prog.GetFd()
+
+	prog_map, err := b.GetMap("jmp_table")
 	must(err)
 
-	//bpf.TracePrint()
+	err = prog_map.Update(unsafe.Pointer(&sub1_prog_index), unsafe.Pointer(&sub_prog_fd))
+	must(err)
 
-	fmt.Println("Cleaning")
+	go bpf.TracePrint()
+
+	<-sig
 }
 
 func must(err error) {

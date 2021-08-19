@@ -1,14 +1,13 @@
-github.com/aquasecurity/libbpfgo v0.1.2-0.20210728125149-cd17c665a141 h1:RhQCgmmomHgiJ51lCBt3RhuZEURZa3W9h2z3apVjGos=
-github.com/aquasecurity/libbpfgo v0.1.2-0.20210728125149-cd17c665a141/go.mod h1:/+clceXE103FaXvVTIY2HAkQjxNtkra4DRWvZYr2SKw=
+github.com/aquasecurity/tracee/libbpfgo v0.0.0-20210518164823-94530727cde4 h1:46arhhxBEYn4SaVliz7bZwVGRrdYUbiVEYNW0kESnnY=
+github.com/aquasecurity/tracee/libbpfgo v0.0.0-20210518164823-94530727cde4/go.mod h1:PgXimFYUSx0PfQFRIyl770Jowy6O3r7iJOr39dt1bss=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/kubearmor/libbpf v0.0.0-20210810135513-6309b56c813f h1:x4/eEWN767E66PVyBu7eYPYxftmqAZShteegHQSUqho=
-github.com/kubearmor/libbpf v0.0.0-20210810135513-6309b56c813f/go.mod h1:oMD+LgXC79ceYQ9CwbQG0IMZLHBOmp+6LKLIDaTyLbM=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+golang.org/x/sys v0.0.0-20210324051608-47abb6519492/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20210514084401-e8d321eab015 h1:hZR0X1kPW+nwyJ9xRxqZk1vx5RUObAPBdKVvXPDUH/E=
 golang.org/x/sys v0.0.0-20210514084401-e8d321eab015/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=

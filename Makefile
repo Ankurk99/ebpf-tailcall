@@ -6,9 +6,9 @@ TARGET_BPF := $(TARGET).bpf.o
 GO_SRC := *.go
 BPF_SRC := *.bpf.c
 
-#LIBBPF_HEADERS := /usr/include/bpf
-LIBBPF_HEADERS := /home/knownymous/go/src/github.com/libbpf/include/bpf
-LIBBPF_OBJ := /home/knownymous/go/src/github.com/libbpf/include/libbpf.a
+LIBBPF_HEADERS := /usr/include/bpf
+#LIBBPF_HEADERS := /home/knownymous/go/src/github.com/libbpf/include/bpf
+LIBBPF_OBJ := ./lib/libbpf.a
 #LIBBPF_OBJ := /home/knownymous/linux/tools/bpf/resolve_btfids/libbpf/libbpf.a
 #LIBBPF_OBJ := /usr/lib/$(ARCH)-linux-gnu/libbpf.a
 
