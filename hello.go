@@ -19,7 +19,8 @@ func main() {
 	must(err)
 	defer b.Close()
 
-	must(b.BPFLoadObject())
+	err = b.BPFLoadObject()
+	must(err)
 
 	prog, err := b.GetProgram("hello")
 	must(err)

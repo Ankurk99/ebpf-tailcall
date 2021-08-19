@@ -5,7 +5,7 @@ struct bpf_map_def SEC("maps") jmp_table = {
 	.type = BPF_MAP_TYPE_PROG_ARRAY,
 	.key_size = sizeof(u32),
 	.value_size = sizeof(u32),
-	.max_entries = 8,
+	.max_entries = 32,
 };
 
 SEC("kprobe/sub_sys_execve")

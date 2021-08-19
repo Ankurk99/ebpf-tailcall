@@ -14,6 +14,8 @@
 typedef __u64 u64;
 typedef __u32 u32;
 
+/* TODO!! This is too generic for this example, where can we pull it from? 
+*/
 #define BPF_MAP(_name, _type, _key_type, _value_type, _max_entries) \
     struct bpf_map_def SEC("maps") _name = {                        \
         .type = _type,                                              \
@@ -29,3 +31,4 @@ typedef __u32 u32;
     BPF_MAP(_name, BPF_MAP_TYPE_PERF_EVENT_ARRAY, int, __u32, 1024);
 
 char LICENSE[] SEC("license") = "Dual BSD/GPL";
+
