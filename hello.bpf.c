@@ -17,4 +17,4 @@ int hello(void *ctx)
 	return 0;
 }
 
-char LICENSE[] SEC("license") = "Dual BSD/GPL";
+char LICENSE[] SEC("license") = "GPL";
