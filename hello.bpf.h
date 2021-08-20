@@ -30,5 +30,4 @@ typedef __u32 u32;
 #define BPF_PERF_OUTPUT(_name) \
     BPF_MAP(_name, BPF_MAP_TYPE_PERF_EVENT_ARRAY, int, __u32, 1024);
 
-char LICENSE[] SEC("license") = "Dual BSD/GPL";
-
+//char LICENSE[] SEC("license") = "Dual BSD/GPL";

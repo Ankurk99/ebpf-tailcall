@@ -26,7 +26,14 @@ func main() {
 	_, err = prog.AttachKprobe(sys_execve)
 	must(err)
 
-	sub_prog, err := b.GetProgram("world")
+	bp, err := bpf.NewModuleFromFile("world.bpf.o")
+	must(err)
+	defer bp.Close()
+
+	err = bp.BPFLoadObject()
+	must(err)
+
+	sub_prog, err := bp.GetProgram("world")
 	must(err)
 	sub_prog_fd := sub_prog.GetFd()
 

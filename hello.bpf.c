@@ -8,13 +8,6 @@ struct bpf_map_def SEC("maps") jmp_table = {
 	.max_entries = 32,
 };
 
-SEC("kprobe/sub_sys_execve")
-int world(void *ctx)
-{
-	bpf_printk("World!\n");
-	return 0;
-}
-
 SEC("kprobe/sys_execve")
 int hello(void *ctx)
 {
@@ -24,3 +17,4 @@ int hello(void *ctx)
 	return 0;
 }
 
+char LICENSE[] SEC("license") = "Dual BSD/GPL";
