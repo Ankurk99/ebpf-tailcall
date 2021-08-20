@@ -7,7 +7,6 @@ import (
 )
 import (
 	"os"
-	"unsafe"
 	"os/signal"
 )
 
@@ -34,7 +33,7 @@ func main() {
 	prog_map, err := b.GetMap("jmp_table")
 	must(err)
 
-	err = prog_map.Update(unsafe.Pointer(&sub1_prog_index), unsafe.Pointer(&sub_prog_fd))
+	err = prog_map.Update(sub1_prog_index, uint32(sub_prog_fd))
 	must(err)
 
 	go bpf.TracePrint()
